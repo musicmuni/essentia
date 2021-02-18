@@ -51,7 +51,7 @@ std::ostream& operator<<(std::ostream& out, const std::complex<float>& c) {
  */
 template <typename T, typename U>
 std::ostream& operator<<(std::ostream& out, const std::pair<T, U>& p) {
-  return out << '<' << p.first << ',' << p.second << '>';
+  return out << "<" << p.first << "," << p.second << ">";
 }
 
 /**
@@ -59,11 +59,11 @@ std::ostream& operator<<(std::ostream& out, const std::pair<T, U>& p) {
  */
 template <typename T>
 std::ostream& operator<<(std::ostream& out, const std::vector<T>& v) {
-  out << '['; if (!v.empty()) {
+  out << "["; if (!v.empty()) {
     out << *v.begin(); typename std::vector<T>::const_iterator it = v.begin();
     for (++it; it != v.end(); ++it) out << ", " << *it;
   }
-  return out << ']';
+  return out << "]";
 }
 
 /**
@@ -71,11 +71,11 @@ std::ostream& operator<<(std::ostream& out, const std::vector<T>& v) {
  */
 template <typename T>
 std::ostream& operator<<(std::ostream& out, const std::set<T>& v) {
-  out << '{'; if (!v.empty()) {
+  out << "{"; if (!v.empty()) {
     out << *v.begin(); typename std::set<T>::const_iterator it = v.begin();
     for (++it; it != v.end(); ++it) out << ", " << *it;
   }
-  return out << '}';
+  return out << "}";
 }
 
 
